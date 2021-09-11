@@ -1,0 +1,1 @@
+web: gunicorn Vaapas.wsgi --log-file -
