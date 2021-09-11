@@ -1,0 +1,6 @@
+api_key = 'cd5202e2-a23c-11ea-9fa5-0200cd936042'
+# api_key = 'f332e941-a49c-11ea-9fa5-0200cd936042'
+From = 'VAAPAS'
+# From = 'MiShtu'
+# TemplateName = 'Auto-read-SMS'
+TemplateName ='Vaapas Verification OTP'
