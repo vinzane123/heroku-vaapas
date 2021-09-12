@@ -139,9 +139,8 @@ class UserIO(mixins.ListModelMixin,
             return self.list(request)            
         
     @swagger_auto_schema(request_body=UserDataSerializer,operation_description="Add UserData")
-    def post(self,request):
+    def post(self,request,phone):
         try:
-            phone=request.data['phone']
             user = User.objects.get(phone=phone)
             user.validated
             userdata = UserData.objects.get(phone=user)
@@ -161,13 +160,6 @@ class UserIO(mixins.ListModelMixin,
     
     @swagger_auto_schema(request_body=UserDataSerializer,operation_description="Update UserData")
     def put(self,request,phone):
-        try:
-            phone = request.data['phone']
-        except:
-            return Response({
-                'status':401,
-                'details':'Unauthorized'
-            })
         try:
             user = User.objects.get(phone=phone)
             user.validated
