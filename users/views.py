@@ -20,7 +20,7 @@ import json,time,random,datetime,requests,logging
 Index Page., Home URL
 '''
 def index(request):
-    return HttpResponse('Hail, Login Service!')
+    return HttpResponse('Hail, Welcome to Vaapas.')
 
 
 class LoginWithOtp(APIView):
